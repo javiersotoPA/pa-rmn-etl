@@ -36,7 +36,7 @@ sheets_of_interest = map_df['Tab or layer'].unique() ## get the list from mapdat
 
 ## READ EXCEL SURVEY FILES
 
-# loop over the list of xlsx files in the root folder
+## loop over the list of xlsx files in the root folder
 rootdir = r'data'
 xlsx_files = []  # create empty list of xlsx files
 
@@ -47,9 +47,20 @@ for subdir, dirs, files in os.walk(rootdir):
             #print(filepath)
             xlsx_files.append(filepath) # append xlsx files to a list
         
-#print(xlsx_files)
-# loop over each sheet from each excel survey
-#print(xlsx_files[0])
+
+## function to remap sheets and export csv:
+
+def remap_and_export(s):
+
+    remap_df = map_df[map_df['Tab or layer'] == s]  
+    # convert column names to a dictionary
+    rename_mapping = dict(zip(remap_df['Field name'], remap_df['Field name for DB']))
+    df.rename(columns=rename_mapping,inplace=True)
+    df.to_csv(f'{s}_test.csv')
+
+
+## loop over each sheet from each excel survey
+
 for s in sheets_of_interest:
     #print(s)
     if s == 'Desk study':
@@ -60,31 +71,18 @@ for s in sheets_of_interest:
         df = df.dropna(axis=1, how='all') # delete all columns with nulls
         #print(df)
         # get columns names from map file
-        #print("\n\n\n", s, "\n\n\n")
-        remap_df = map_df[map_df['Tab or layer'] == s]
-        #print(remap_df)
-
-        # convert column names to a dictionary
-        rename_mapping = dict(zip(remap_df['Field name'], remap_df['Field name for DB']))
-        df.rename(columns=rename_mapping,inplace=True)
-        #print(df)
+        remap_and_export(s)
         
-    if s == 'Feature status - drains':
+    if s == 'Feature status - drains' or s == 'Feature status - gullies' or s == 'Feature status - bare peat' or s == 'Feature status - F2B':
         df = pd.read_excel(xlsx_files[0], sheet_name=s, index_col=0, header=1)
         df = df.dropna(axis=0, how='all') # delete all rows with nulls
         df = df.dropna(axis=1, how='all') # delete all columns with nulls
         #print(df)
         df = df.reset_index()
-        df = df.drop([1])  # delete second row from dataframe as it contains the datatypes
+        df = df.drop([0])  # delete first row from dataframe as it contains the datatypes
         
         # get columns names from map file
-        #print("\n\n\n", s, "\n\n\n")
-        remap_df = map_df[map_df['Tab or layer'] == s]
-        #print(remap_df)
-        # convert column names to a dictionary
-        rename_mapping = dict(zip(remap_df['Field name'], remap_df['Field name for DB']))
-        df.rename(columns=rename_mapping,inplace=True)
-        df.to_excel(f'{s}_test.xlsx')
+        remap_and_export(s)
     
     if s == 'Quadrat information' or s == 'Vegetation':
         df = pd.read_excel(xlsx_files[0], sheet_name=s, index_col=0)
@@ -92,15 +90,10 @@ for s in sheets_of_interest:
         df = df.dropna(axis=1, how='all') # delete all columns with nulls
         #print(df)
         df = df.reset_index()
-        df = df.drop([1])  # delete second row from dataframe as it contains the datatypes
+        df = df.drop([0])  # delete second row from dataframe as it contains the datatypes
+        
         # get columns names from map file
-        #print("\n\n\n", s, "\n\n\n")
-        remap_df = map_df[map_df['Tab or layer'] == s]
-        #print(remap_df)
-        # convert column names to a dictionary
-        rename_mapping = dict(zip(remap_df['Field name'], remap_df['Field name for DB']))
-        df.rename(columns=rename_mapping,inplace=True)
-        df.to_excel(f'{s}_test.xlsx')
+        remap_and_export(s)
 
 
 
