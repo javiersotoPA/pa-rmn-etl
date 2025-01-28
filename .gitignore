@@ -2,6 +2,7 @@
 *.log
 *.xlsx
 *.csv
+*config*
 
 # ignore ALL files in ANY directory named temp
 data/
