@@ -1,0 +1,98 @@
+## MS01 1-year
+
+python rmn_excel_template_reader.py -r MS01 -g 502418 -v 1-year "C:\javi\repos\rmn\data\DONE - MS01\MS01 - post\DONE-PA - Monitoring - RMN survey - 202324 - Post-restoration - MS01 Ben Lawyers - 1-year excel - 08 Oct 2024 (A4770282).xlsx"
+
+python rmn_spatial_template_reader.py -r MS01 -g 502418 -v 1-year "C:/javi/repos/rmn/data/DONE - MS01/MS01 - post/Ben Lawers - RMN 1-year post, data templates/GIS template/monitoring.gpkg"
+
+
+## MS01 pre_restoration
+
+python rmn_excel_template_reader.py -r MS01 -g 502418 -v Pre-restoration "C:\javi\repos\rmn\data\DONE - MS01\DONE - MS01 - RMN surveys - 2023_24 - Pre-restoration - Ben Lawers - Completed survey data - 19 Oct 2023\Restoration Monitoring Network - Ben Lawers - Data\2023-09-27 ben_lawers_data.xlsx"
+
+python rmn_spatial_template_reader.py -r MS01 -g 502418 -v Pre-restoration "C:\javi\repos\rmn\data\DONE - MS01\DONE - MS01 - RMN surveys - 2023_24 - Pre-restoration - Ben Lawers - Completed survey data - 19 Oct 2023\Restoration Monitoring Network - Ben Lawers - Data\monitoring.gpkg"
+
+
+## MS02 pre_restoration
+
+python rmn_excel_template_reader.py -r MS02 -g 502500 -v Pre-restoration "C:\javi\repos\rmn\data\DONE -MS02 - RMN Survey - 2024 - 1 year - Final survey data - GIS and Excel data - 10 Sept 2024\pre\Wemyss_March_Excel.xlsx"
+
+python rmn_spatial_template_reader.py -r MS02 -g 502500 -v Pre-restoration "C:\javi\repos\rmn\data\DONE -MS02 - RMN Survey - 2024 - 1 year - Final survey data - GIS and Excel data - 10 Sept 2024\pre\Wemyss_March_GIS\monitoring.gpkg"
+
+
+## MS02 post_restoration
+
+python rmn_excel_template_reader.py -r MS02 -g 502500 -v 1-year "C:\javi\repos\rmn\data\DONE -MS02 - RMN Survey - 2024 - 1 year - Final survey data - GIS and Excel data - 10 Sept 2024\DONE 1year\W&M_Y1_040924.xlsx" 
+
+python rmn_spatial_template_reader.py -r MS02 -g 502500 -v 1-year "C:\javi\repos\rmn\data\DONE -MS02 - RMN Survey - 2024 - 1 year - Final survey data - GIS and Excel data - 10 Sept 2024\DONE 1year\monitoring.gpkg"
+
+
+## MS03 pre_restoration
+
+python rmn_excel_template_reader.py -r MS03 -g UNK_MS03 -v Pre-restoration "C:\javi\repos\rmn\data\NO-MS03 South Rannoch -  Desk study and data templates - 25 September 2023\South Rannoch Excel Data Amended.xlsx"  
+
+python rmn_spatial_template_reader.py -r MS03 -g UNK_MS03 -v Pre-restoration "C:\javi\repos\rmn\data\NO-MS03 South Rannoch -  Desk study and data templates - 25 September 2023\South Rannoch MS03 QGIS\South Rannoch MS04 QGIS\monitoring.gpkg" 
+
+
+## MS03 1-year
+
+
+
+## MS04 Pre-restoration
+
+python rmn_excel_template_reader.py -r MS04 -g 502467 -v Pre-restoration "C:\javi\repos\rmn\data\DONE - MS04 - Pre-restoration - Kirklea - Completed survey data - 12 Oct 2023\Restoration Monitoring Network - NSM Kirklea - Data\Excel data template.xlsx" 
+
+python rmn_spatial_template_reader.py -r MS04 -g 502467 -v Pre-restoration "C:\javi\repos\rmn\data\DONE - MS04 - Pre-restoration - Kirklea - Completed survey data - 12 Oct 2023\Restoration Monitoring Network - NSM Kirklea - Data\GIS spatial data template\monitoring.gpkg" 
+
+
+## MS04 1-year
+
+
+python rmn_excel_template_reader.py -r MS04 -g 502467 -v 1-year "C:\javi\repos\rmn\data\DONE - MS04 - Pre-restoration - Kirklea - Completed survey data - 12 Oct 2023\1-year\Kirklea_Y1_270924.xlsx"  
+
+python rmn_spatial_template_reader.py -r MS04 -g 502467 -v 1-year "C:\javi\repos\rmn\data\DONE - MS04 - Pre-restoration - Kirklea - Completed survey data - 12 Oct 2023\1-year\data.gpkg" 
+
+
+## MS05 Pre-restoration
+
+python rmn_excel_template_reader.py -r MS05 -g 502419 -v Pre-restoration 
+
+python rmn_spatial_template_reader.py -r MS05 -g 502419 -v Pre-restoration 
+
+## MS05 1-year
+
+
+python rmn_excel_template_reader.py -r MS05 -g 502419 -v 1-year  
+
+python rmn_spatial_template_reader.py -r MS05 -g 502419 -v 1-year 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
