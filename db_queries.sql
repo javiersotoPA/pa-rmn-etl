@@ -1,4 +1,4 @@
-DROP SCHEMA  pa_restoration_monitoring_network;
+DROP SCHEMA  pa_restoration_monitoring_network CASCADE;
 CREATE SCHEMA pa_restoration_monitoring_network;
 
 CREATE TABLE pa_restoration_monitoring_network.desk_study (
@@ -144,6 +144,40 @@ CREATE TABLE pa_restoration_monitoring_network.area_level_assessment (
     dwarf_shrub_notes VARCHAR,
     eriophorum VARCHAR(255),
     eriophorum_notes VARCHAR,
+	trichophorum VARCHAR(255),
+	trichophorum_notes VARCHAR,
+	molinia VARCHAR(255),
+	molinia_notes VARCHAR,
+	other_poaceae VARCHAR(255),
+	other_poaceae_notes VARCHAR,
+	sphagnum VARCHAR(255),
+	sphagnum_notes VARCHAR,
+	trees VARCHAR(255),
+	trees_notes VARCHAR,
+	inns VARCHAR(255),
+	inns_notes VARCHAR,
+	restoration_activities VARCHAR(255),
+	restoration_activities_notes VARCHAR,
+	bare_peat_impact VARCHAR(255),
+	bare_peat_impact_notes VARCHAR,
+	drain_intensity VARCHAR(255),
+	drain_intensity_notes VARCHAR,
+	drain_status VARCHAR(255),
+	drain_status_notes VARCHAR,
+	burning VARCHAR(255),
+	burning_notes VARCHAR,
+	herbivore_ground_disturbance VARCHAR(255),
+	herbivore_ground_disturbance_notes VARCHAR,
+	herbivore_grazing VARCHAR(255),
+	herbivore_grazing_notes VARCHAR,
+	trees_impact VARCHAR(255),
+	trees_impact_notes VARCHAR,
+	peat_extraction VARCHAR(255),
+	peat_extraction_notes VARCHAR,
+	human_infrastructure VARCHAR(255),
+	human_infrastructure_notes VARCHAR,
+	other_damage VARCHAR(255),
+	other_damage_notes VARCHAR,
     importe_by VARCHAR(255),
     updated_by VARCHAR(255),
     updated_date DATE,
@@ -319,21 +353,17 @@ CREATE TABLE pa_restoration_monitoring_network.fpp_points (
     rmn_id VARCHAR(10),
     grant_id VARCHAR(10),
     visit VARCHAR(50),
-    sampling_point_id VARCHAR(50),
     easting DECIMAL(10,6),
     northing DECIMAL(10,6),
-    horizontal_accuracy DECIMAL(5,2),
+    bearing INT,
     vertical_accuracy DECIMAL(5,2),
-    date DATE,
-    elevation DECIMAL(5,2),
-    satellites INT,
-    drain_point_id VARCHAR(255),
-    gnss_height DECIMAL(5,2),
+    camera_height INT,
     importe_by VARCHAR(255),
     updated_by VARCHAR(255),
     updated_date DATE,
     import_date DATE
 );
+
 
 
 
